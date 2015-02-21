@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fluid Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Roboto);
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .title {
+        font-size: 2.5em;
+        text-align: center;
+      }
+
+      .box {
+        min-height: 150px;
+      }
+
+      .dark_blue {
+        background-color: #2A457A;
+        color: #efefef;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 50px auto;
+      }
+
+      .light_blue {
+        background-color: #099DD9;
+        text-align: center;
+      }
+
+      .green {
+        background-color: #0C8542;
+        text-align: center;
+      }
+
+      .lime {
+        background-color: rgb(179, 210, 52);
+        text-align: center;
+      }
+
+      .seafoam {
+        background-color: rgb(77, 190, 161);
+        text-align: center;
+      }
+
+      .red {
+        background-color: #EC1D3B;
+        text-align: center;
+      }
+
+      .orange {
+        background-color: #F79420;
+        text-align: center;
+      }
+    </style>
+    <style type="text/css">
+      /*
+      These are the responsive styles. Throw some breakpoints in here!
+      */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        width: 100%;
+      }
+
+      @media screen and (min-width: 450px) {
+        .light_blue, .green{
+          width: 50%;
+        }
+      }
+      @media screen and (min-width:550px) {
+        .light_blue{
+          width: 50%;
+          display: inline-block;
+        }
+        .green {
+          width:50%;
+        }
+      
+        .red {
+          width:25%;
+        }
+        .orange{
+          width:75%;
+        }
+      }
+      @media screen and (min-width: 800px){
+        .container{
+          width:800px;
+          margin: 0 auto;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box dark_blue"><h1>Humpty Dumpty sat on a wall</h1></div>
+      <div class="box light_blue"><h1>Humpty Dumpty had a great FALL.</h1></div>
+      <div class="box green"><h1>All the king's horses</h1></div>
+      <div class="box red"><h1>And all the king's men</h1></div>
+      <div class="box orange"><h1>Couldn't put Humpty together again.</h1></div>
+    </div>
+  </body>
+</html>
